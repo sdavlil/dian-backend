@@ -34,4 +34,5 @@ COPY --from=build /app/target/dian-backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Comando para ejecutar la app
-CMD ["java", "-jar", "app.jar"]
+CMD ["sh", "-c", "java -jar app.jar --server.port=$PORT"]
+
